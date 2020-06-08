@@ -163,13 +163,23 @@ Error message and password prompt
 
 <li>File comparator Open Source : Meld</li>
 
+<li>Gestos multitáctiles de Mac en Ubuntu</li>
+
+<li>Git Command Line Commands</li>
+
+<li>GoLang Installation</li>
+
 <li>Instal·lació drivers gràfica</li>
 
 <li>Instal·lació drivers nvidia</li>
 
 <li>Instal·lació n controlador versions de Node</li>
 
+<li>Linux Command Line Commands</li>
+
 <li>NodeJS 10.15 Installation</li>
+
+<li>Postman Installation</li>
 
 </ul>
 </p>
@@ -9380,13 +9390,13 @@ Error message and password prompt
 <div created="20191217113309399" modified="20191217113309399" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200501173023583" modified="20200501173058526" title="$:/state/sidebar">
+<div created="20200501173023583" modified="20200608144010929" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20200501172344803" list="" modified="20200501172344803" title="$:/StoryList">
+<div created="20200608143332592" list="" modified="20200608143332592" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9402,7 +9412,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/xaviermaltas/Downloads/installations.html&quot;
+            &quot;text&quot;: &quot;file:///home/xaviermaltas/Desktop/myRepos/installations/installations.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9422,7 +9432,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/xaviermaltas/Downloads/installations.html&quot;
+            &quot;text&quot;: &quot;/home/xaviermaltas/Desktop/myRepos/installations/installations.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9585,6 +9595,146 @@ sudo apt-get install meld
 ```
 </pre>
 </div>
+<div created="20200608143519224" modified="20200608143622963" tags="" title="Gestos multitáctiles de Mac en Ubuntu">
+<pre>Explicació de com posar els gestos de Mac a Ubuntu
+
+· Fusuma 
+    SOURCE
+     - https://askubuntu.com/questions/1034624/touchpad-gestures-in-ubuntu-18-04-lts
+     - https://github.com/iberianpig/fusuma/blob/master/README.md
+
+    INSTRUCTIONS
+
+
+```
+    sudo gpasswd -a $USER input 
+    sudo apt-get install libinput-tools
+    sudo apt-get install xdotool
+    sudo apt install ruby 
+    sudo gem install fusuma
+    cd ~/.config
+    mkdir fusuma
+    cd fusuma
+    touch config.yml
+    nano config.yml 
+
+        swipe:
+        3: 
+            left: 
+            command: 'xdotool key alt+Right'
+            right: 
+            command: 'xdotool key alt+Left'
+            up: 
+            command: 'xdotool key super'
+            down: 
+            command: 'xdotool key super'
+        4:
+            left: 
+            command: 'xdotool key ctrl+alt+Down'
+            right: 
+            command: 'xdotool key ctrl+alt+Up'
+            up: 
+            command: 'xdotool key ctrl+alt+Down'
+            down: 
+            command: 'xdotool key ctrl+alt+Up'
+        pinch:
+        in:
+            command: 'xdotool key ctrl+plus'
+        out:
+            command: 'xdotool key ctrl+minus'
+
+        threshold:
+        swipe: 0.4
+        pinch: 0.4
+
+        interval:
+        swipe: 0.8
+        pinch: 0.1
+
+    sudo fusuma
+```
+
+
+· Touchegg
+    https://ubunlog.com/gestos-multitactiles-mac-en-ubuntu/
+    https://github.com/JoseExposito/touchegg
+
+</pre>
+</div>
+<div created="20200608143921641" modified="20200608144008517" tags="" title="Git Command Line Commands">
+<pre>Download an specific Branch from a repository:
+
+```
+git clone repoURL -b branchName https://github.com/dappuniversity/election.git -b 2019_update
+```
+
+
+Delete all the content of a repo to re-upload all again:
+
+```
+git pull (get the last version of the repo)
+git rm -r * (delete all from the folder)
+git git commit -m &quot;Delete all the stuff&quot;
+git push
+```
+
+</pre>
+</div>
+<div created="20200608143407417" modified="20200608143453528" tags="" title="GoLang Installation">
+<pre>src : https://medium.com/better-programming/install-go-1-11-on-ubuntu-18-04-16-04-lts-8c098c503c5f)
+
+```
+
+sudo apt-get update
+sudo apt-get -y upgrade
+
+cd /tmp
+wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
+
+sudo tar -xvf go1.11.linux-amd64.tar.gz
+sudo mv go /usr/local
+
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+go version
+go env
+
+output:
+{
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOCACHE=&quot;/home/ridham/.cache/go-build&quot;
+GOEXE=&quot;&quot;
+GOFLAGS=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/ridham/go&quot;
+GOPROXY=&quot;&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/usr/local/go&quot;
+GOTMPDIR=&quot;&quot;
+GOTOOLDIR=&quot;/usr/local/go/pkg/tool/linux_amd64&quot;
+GCCGO=&quot;gccgo&quot;
+CC=&quot;gcc&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+GOMOD=&quot;&quot;
+CGO_CFLAGS=&quot;-g -O2&quot;
+CGO_CPPFLAGS=&quot;&quot;
+CGO_CXXFLAGS=&quot;-g -O2&quot;
+CGO_FFLAGS=&quot;-g -O2&quot;
+CGO_LDFLAGS=&quot;-g -O2&quot;
+PKG_CONFIG=&quot;pkg-config&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build476037005=/tmp/go-build -gno-record-gcc-switches&quot;
+}
+
+```
+</pre>
+</div>
 <div created="20191217113126154" modified="20191228232012739" tags="[[#grafica #drivers]]" title="Instal·lació drivers gràfica">
 <pre>(src: https://askubuntu.com/questions/1069451/ubuntu-18-04-displays-issue-unknown-display , http://ubuntuhandbook.org/index.php/2019/03/install-nvidia-418-43-g-sync-support-ubuntu-18-04/)
 
@@ -9632,6 +9782,72 @@ curl -o- -L https://git.io/n-install | bash
 
 Farà la descarrega via 'Third Party Installers' i fara el paquet global i accessible desde tots els punts del pc. </pre>
 </div>
+<div created="20200608143701309" modified="20200608143854478" tags="" title="Linux Command Line Commands">
+<pre>Extra de persimos per executar un fitxer
+
+```
+chmod -x &lt;fileName&gt;
+
+```
+
+Moure carpeta dins d'una altra carpeta
+
+```
+mv &lt;sourceFolder&gt; &lt;targetFolder&gt;
+```
+
+
+Llista on es troba els fitxers d'una aplicació
+
+```
+dpkg --listfiles &lt;aplicationName&gt;
+dpkg --listfiles whatsapp-desktop
+```
+
+
+Eliminar una aplicació
+
+```
+sudo apt-get remove &lt;aplicationName&gt;
+sudo apt-get remove whatsapp-desktop
+```
+
+
+Eliminar una carpeta
+
+```
+rm -rf &lt;targetFolder&gt;
+rm -rf node_modules
+```
+
+
+Elimina fitxer 
+
+```
+rm &lt;targetFile&gt;
+rm file.json
+```
+
+
+Copia fitxer
+
+```
+cp &lt;file&gt; &lt;targetDestination&gt;
+cp perminssioned-nodes.json qdata/dd1/
+```
+
+	
+Trobar tipus de fitxer
+
+```
+sudo find &lt;location&gt; -name &quot;&lt;fileType&gt;&quot;
+sudo find /home/ -name &quot;*.ipc&quot;
+```
+
+
+
+</pre>
+</div>
 <div created="20200501173004867" modified="20200501173047461" tags="node" title="NodeJS 10.15 Installation">
 <pre>(src: https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/ )
 
@@ -9643,6 +9859,34 @@ sudo apt-get install nodejs
 
 node -v 
 npm -v 
+```
+</pre>
+</div>
+<div created="20200608143034329" modified="20200608143156570" tags="" title="Postman Installation">
+<pre>
+```
+wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
+sudo tar -xzf postman.tar.gz -C /opt
+rm postman.tar.gz
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+```
+
+
+
+This is to create the launcher
+
+
+```
+cat &gt; ~/.local/share/applications/postman.desktop &lt;&lt;EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOL
 ```
 </pre>
 </div>
