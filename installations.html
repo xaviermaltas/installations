@@ -197,6 +197,8 @@ Error message and password prompt
 
 <li>UEFI Secure Boot</li>
 
+<li>UEFI vs. BIOS</li>
+
 <li>Visual Studio Code Shortcuts</li>
 
 </ul>
@@ -9417,7 +9419,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div created="20200805134328930" list="" modified="20200805134328930" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9473,7 +9475,7 @@ Error message and password prompt
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;es-ES&quot;
+            &quot;text&quot;: &quot;en-US&quot;
         }
     }
 }</pre>
@@ -10026,7 +10028,7 @@ sudo ufw status verbose
 ```
 </pre>
 </div>
-<div created="20200805132824048" modified="20200805132916232" tags="" title="UEFI Secure Boot">
+<div created="20200805132824048" modified="20200805134600820" tags="" title="UEFI Secure Boot">
 <pre>( src : https://wiki.ubuntu.com/UEFI/SecureBoot )
 
 ''What is UEFI Secure Boot?''
@@ -10038,6 +10040,25 @@ Proper, secure use of UEFI Secure Boot requires that each binary loaded at boot 
 Most x86 hardware comes from the factory pre-loaded with Microsoft keys. This means we can generally rely on the firmware on these systems to trust binaries that are signed by Microsoft, and the Linux community heavily relies on this assumption for Secure Boot to work. This is the same process used by Red Hat and SUSE, for instance.
 
 Many ARM and other architectures also support UEFI Secure Boot, but may not be pre-loading keys in firmware. On these architectures, it may be necessary to re-sign boot images with a certificate that is loaded in firmware by the owner of the hardware.</pre>
+</div>
+<div created="20200805134353788" modified="20200805134548133" tags="" title="UEFI vs. BIOS">
+<pre>(src : https://www.partitionwizard.com/partitionmagic/uefi-vs-bios.html ) 
+
+UEFI and BIOS are two different types of motherboard firmware. Some users are confused about the two. In this post, I will illustrate you the main differences between UEFI and BIOS by giving you a UEFI vs BIOS, and show you how to convert MBR disk to GPT to support UEFI boot mode.
+
+
+''What Is UEFI?''
+
+UEFI is the abbreviation of ''Unified Extensible Firmware Interface'', which is a firmware interface for computers and it works as a &quot;middleman&quot; to connect a computer's firmware to its operating system. It is used to initialize the hardware components and start the operating system stored on the hard disk drive when the computer starts up.
+
+UEFI possesses many new features and advantages that cannot be achieved through the traditional BIOS and it is aimed to completely replace the BIOS in the future.
+
+''What Is BIOS?''
+
+BIOS is short for ''Basic Input/Output System'', also known as system BIOS, ROM BIOS or PC BIOS. It is a firmware embedded on the chip on the computer's motherboard. BIOS firmware is pre-installed on the motherboard of a PC. It is a non-volatile firmware which means its settings won’t disappear or change even after power off.
+
+It is not hard to understand how BIOS works. When your computer starts up, the BIOS loads and wakes up the computer's hardware components, making sure they are working properly. Then it loads the boot loader to initializes Windows or any other operating system you have installed.
+</pre>
 </div>
 <div created="20200609173918872" modified="20200722151755992" tags="" title="Visual Studio Code Shortcuts">
 <pre>Change layout to a split editor vertically :
