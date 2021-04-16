@@ -215,6 +215,8 @@ Error message and password prompt
 
 <li>R: Miscellaneous</li>
 
+<li>R: New virtual env</li>
+
 <li>R: Package Manager</li>
 
 <li>R: Virutal Environment</li>
@@ -9455,7 +9457,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20210330111815678" list="[[IntelliJ ShortCuts]] [[R: Miscellaneous]] GettingStarted" modified="20210330111818571" title="$:/StoryList">
+<div created="20210416165654567" list="" modified="20210416221629088" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9499,7 +9501,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -9511,7 +9513,7 @@ Error message and password prompt
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;es-ES&quot;
+            &quot;text&quot;: &quot;en-GB&quot;
         }
     }
 }</pre>
@@ -10376,6 +10378,51 @@ out&gt;
 6 Abelseth, Mr. Olaus JÃ¸rgensen   male  25   3rd        S United States   348122  7.13     0     0      yes        20-29
 ```</pre>
 </div>
+<div created="20210416220818003" modified="20210416221405464" tags="#r" title="R: New virtual env">
+<pre>!! ''New Virtual Environment''
+
+Setps to create a new virtual environment.
+
+1 - Create new directory.
+
+2 - Inside the directory install the following packages.
+
+```
+install.packages(&quot;rsconnect&quot;)
+
+install.packages(&quot;devtools&quot;)
+
+install.packages(&quot;RCurl&quot;, version = &quot;1.98-1.2&quot;, repo = &quot;https://ftp.uni-sofia.bg/CRAN&quot;, type = &quot;binary&quot;)
+
+install.packages(&quot;rgdal&quot;, version = &quot;1.4.8&quot;, repo = &quot;https://ftp.uni-sofia.bg/CRAN&quot;, type = &quot;binary&quot;)
+
+devtools::install_version(&quot;renv&quot;, version = &quot;0.9.2&quot;)
+```
+
+3 - Activate renv.
+
+```
+renv::activate()
+```
+
+4 - Restore renv.
+
+```
+renv::restore()
+```
+
+5 - Create a new R file with the following code. 
+
+```
+# https://cran.r-project.org/web/packages/ggplot2/index.html
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+
+# https://cran.r-project.org/web/packages/dplyr/index.html
+if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
+
+print(&quot;Hello World!&quot;)
+```</pre>
+</div>
 <div created="20210328112301330" modified="20210328123836935" tags="#r" title="R: Package Manager">
 <pre>!! ''R Package Manager''
 
@@ -10400,13 +10447,9 @@ installed.packages()
 ```
 </pre>
 </div>
-<div created="20210328112847845" modified="20210328105002260" tags="#r" title="R: Virutal Environment">
+<div created="20210328112847845" modified="20210416220849052" tags="#r" title="R: Virutal Environment">
 <pre>!! ''Virtual Environment''
 
-
-&lt;&lt;&lt;
-
-&lt;&lt;&lt;
 To create a virutal environment with R language we are going to use a package called ''renv''. 
 
 !!!! ''Activate virtual environment''
