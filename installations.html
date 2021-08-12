@@ -193,13 +193,15 @@ Error message and password prompt
 
 <li>Instal·lació Forticlient - VPN UPF</li>
 
-<li>Instal·lació n controlador versions de Node</li>
-
 <li>IntelliJ ShortCuts</li>
 
 <li>Linux Command Line Commands</li>
 
-<li>NodeJS 10.15 Installation</li>
+<li>NodeJS: 10.15 Installation</li>
+
+<li>NodeJS: Instal·lació n controlador versions de Node</li>
+
+<li>NodeJS: npm vs npx</li>
 
 <li>Postman Installation</li>
 
@@ -9453,13 +9455,13 @@ Error message and password prompt
 <div created="20191217113309399" modified="20191217113309399" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200501173023583" modified="20210329183309788" title="$:/state/sidebar">
+<div created="20200501173023583" modified="20210812142244751" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="[[Windows: Microsoft Windows Search Indexer high CPU usage]] GettingStarted" title="$:/StoryList">
+<div created="20210812135155985" list="[[NodeJS: npm vs npx]]" modified="20210812141638905" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9475,7 +9477,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/xavim/Desktop/myRepos/installations/installations.html&quot;
+            &quot;text&quot;: &quot;file:///home/xaviermaltas/Desktop/myRepos/installations/installations.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9495,7 +9497,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/xavim/Desktop/myRepos/installations/installations.html&quot;
+            &quot;text&quot;: &quot;/home/xaviermaltas/Desktop/myRepos/installations/installations.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9503,7 +9505,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;null&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -9515,12 +9517,12 @@ Error message and password prompt
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-GB&quot;
+            &quot;text&quot;: &quot;en-US&quot;
         }
     }
 }</pre>
 </div>
-<div created="20200609182102607" modified="20210313230712381" title="$:/temp/search">
+<div created="20200609182102607" modified="20210812135203191" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
@@ -10026,42 +10028,6 @@ Forticlient SSLVPN 4.4.2333-1 64bit
 
 </pre>
 </div>
-<div created="20200325012544579" modified="20200608170618697" tags="node" title="Instal·lació n controlador versions de Node">
-<pre>''Si no tens node i npm instal·lat''
-
-Clonar el repository i crear executable:
-
-```
-git clone https://github.com/tj/n
-cd n
-sudo apt-get install make
-sudo make install
-```
-
-Moura executable 
-
-
-```
-mkdir -p /usr/local/bin/
-cp bin/n /usr/local/bin/n
-```
-
-
-
-''Si ja tens node i npm instal·lat''
-
-Despres tenir molts problemes per borrar node i npm, anant a les carpetes /usr/local i /usr/bin i borrant tot el relacionat amb node i npm, per fi deixem el ordinador net.
-
-
-Per instal·lar el version manager, s'ha de posar la següent commanda al home d'Ubuntu:
-
-
-```
-curl -o- -L https://git.io/n-install | bash 
-```
-
-Farà la descarrega via 'Third Party Installers' i fara el paquet global i accessible desde tots els punts del pc. </pre>
-</div>
 <div created="20210326143810460" modified="20210330111951275" tags="#intelliJ" title="IntelliJ ShortCuts">
 <pre>* Ctrl + Shift + Alt + F7 -&gt; Buscar Usage
 
@@ -10148,7 +10114,7 @@ sudo find /home/ -name &quot;*.ipc&quot;
 
 </pre>
 </div>
-<div created="20200501173004867" modified="20200501173047461" tags="node" title="NodeJS 10.15 Installation">
+<div created="20200501173004867" modified="20210812135310684" tags="node" title="NodeJS: 10.15 Installation">
 <pre>(src: https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/ )
 
 
@@ -10161,6 +10127,59 @@ node -v
 npm -v 
 ```
 </pre>
+</div>
+<div created="20200325012544579" modified="20210812135319967" tags="node n" title="NodeJS: Instal·lació n controlador versions de Node">
+<pre>''Si no tens node i npm instal·lat''
+
+Clonar el repository i crear executable:
+
+```
+git clone https://github.com/tj/n
+cd n
+sudo apt-get install make
+sudo make install
+```
+
+Moura executable 
+
+
+```
+mkdir -p /usr/local/bin/
+cp bin/n /usr/local/bin/n
+```
+
+
+
+''Si ja tens node i npm instal·lat''
+
+Despres tenir molts problemes per borrar node i npm, anant a les carpetes /usr/local i /usr/bin i borrant tot el relacionat amb node i npm, per fi deixem el ordinador net.
+
+
+Per instal·lar el version manager, s'ha de posar la següent commanda al home d'Ubuntu:
+
+
+```
+curl -o- -L https://git.io/n-install | bash 
+```
+
+Farà la descarrega via 'Third Party Installers' i fara el paquet global i accessible desde tots els punts del pc. </pre>
+</div>
+<div created="20210812135323271" modified="20210812142521762" tags="node npm npx" title="NodeJS: npm vs npx">
+<pre>src: https://www.geeksforgeeks.org/what-are-the-differences-between-npm-and-npx/
+
+---
+!! · NPM
+
+The npm stands for ''Node Package Manager''. The function of npm is to manage all the packages and modules for node.js and consists on a command-line client. 
+
+(Npm is a tool that use to install packages)
+
+
+!! · NPX
+
+The npx stands for ''Node Package Execute''. It is an npm package runner that can execute any package from the npm registry without even installing that package. 
+
+(Npx is a tool that use to execute packages)</pre>
 </div>
 <div created="20200608143034329" modified="20200608143156570" tags="" title="Postman Installation">
 <pre>```
