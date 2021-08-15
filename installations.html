@@ -225,6 +225,8 @@ Error message and password prompt
 
 <li>Ubuntu Firewall</li>
 
+<li>Ubuntu: Programs Installation Script</li>
+
 <li>UEFI Secure Boot</li>
 
 <li>UEFI vs. BIOS</li>
@@ -9455,13 +9457,13 @@ Error message and password prompt
 <div created="20191217113309399" modified="20191217113309399" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200501173023583" modified="20210812142244751" title="$:/state/sidebar">
+<div created="20200501173023583" modified="20210815000445928" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20210812135155985" list="[[NodeJS: npm vs npx]]" modified="20210812141638905" title="$:/StoryList">
+<div created="20210814235608754" list="[[Ubuntu: Programs Installation Script]] GettingStarted" modified="20210814235732242" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9522,7 +9524,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200609182102607" modified="20210812135203191" title="$:/temp/search">
+<div created="20200609182102607" modified="20210814235524506" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
@@ -10490,6 +10492,83 @@ renv::deactivate()
 
 ```
 sudo ufw status verbose
+```
+</pre>
+</div>
+<div created="20210814235527676" modified="20210815000413898" tags="#ubuntu" title="Ubuntu: Programs Installation Script">
+<pre>This is a script to install automatically all the main used programs on Ubuntu.
+
+''Step 1'' - Create a// .sh// file.
+
+```
+touch installationScript.sh
+```
+
+''Step 2'' - Edit the // .sh// file to insert the code.
+
+```
+nano installationScript.sh
+```
+
+''Step 3'' - Paste the code on the // .sh// file and save it.
+
+```
+#!/bin/bash
+echo &quot;-----------------------------&quot;
+echo &quot;| PROGRAM INSTALLATION FILE |&quot;
+echo &quot;-----------------------------&quot;
+echo &quot; &quot;
+echo &quot; * MAILSRPING * &quot;
+sudo snap install mailspring
+
+echo &quot; * OPERA BROWSER * &quot;
+sudo snap install opera
+
+echo &quot; * VS CODE * &quot;
+sudo snap install --classic code
+
+echo &quot; * CHROMIUM BROWSER * &quot;
+sudo apt-get install chromium-browser
+
+echo &quot; * GITKRAKEN * &quot;
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo dpkg -i gitkraken-amd64.deb
+sudo rm gitkraken-amd64.deb
+
+echo &quot; * SPOTIFY * &quot;
+sudo snap install spotify
+
+echo &quot; * DISCORD * &quot;
+sudo snap install discord
+
+echo &quot; * MELD * &quot;
+sudo apt-get install meld
+
+echo &quot; * SKYPE * &quot;
+sudo snap install skype --classic
+
+echo &quot; * POSTMAN * &quot;
+sudo snap install postman
+
+echo &quot; * LIBRARIES *&quot;
+sudo apt-get install git
+sudo apt install tree
+
+echo &quot; * NVIDIA DRIVERS * &quot;
+ubuntu-drivers devices
+sudo ubuntu-drivers autoinstall
+```
+
+''Step 4'' - Give execute permission to your script.
+
+```
+chmod +x installationScript.sh
+```
+
+''Step 5'' - Execute your script.
+
+```
+./installationScript.sh
 ```
 </pre>
 </div>
