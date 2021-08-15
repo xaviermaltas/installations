@@ -227,6 +227,8 @@ Error message and password prompt
 
 <li>Ubuntu: Programs Installation Script</li>
 
+<li>Ubuntu: Secondary display setted as the default login</li>
+
 <li>UEFI Secure Boot</li>
 
 <li>UEFI vs. BIOS</li>
@@ -9463,7 +9465,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20210814235608754" list="[[Ubuntu: Programs Installation Script]] GettingStarted" modified="20210814235732242" title="$:/StoryList">
+<div list="[[Ubuntu: Secondary display setted as the default login]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10569,6 +10571,23 @@ chmod +x installationScript.sh
 
 ```
 ./installationScript.sh
+```
+</pre>
+</div>
+<div created="20210815002255330" modified="20210815002506960" tags="#ubuntu" title="Ubuntu: Secondary display setted as the default login">
+<pre>(src: https://askubuntu.com/questions/1043337/is-there-to-make-the-login-screen-appear-on-the-external-display-in-18-04)
+
+---
+
+```
+sudo cp ~/.config/monitors.xml ~gdm/.config/monitors.xml
+sudo chown gdm:gdm ~gdm/.config/monitors.xml
+```
+
+On the file /etc/gdm3/custom.conf
+
+```
+And in the /etc/gdm3/custom.conf uncomment WaylandEnable=false
 ```
 </pre>
 </div>
