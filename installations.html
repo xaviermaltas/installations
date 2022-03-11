@@ -151,6 +151,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/image-picker/system-1277902375</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -193,6 +195,8 @@ Error message and password prompt
 
 <li>Helm</li>
 
+<li>HomeBrew</li>
+
 <li>Instal·lació drivers gràfica</li>
 
 <li>Instal·lació drivers nvidia</li>
@@ -200,6 +204,10 @@ Error message and password prompt
 <li>Instal·lació Forticlient - VPN UPF</li>
 
 <li>IntelliJ ShortCuts</li>
+
+<li>Kubernetes</li>
+
+<li>Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller</li>
 
 <li>Linux Command Line Commands</li>
 
@@ -9477,16 +9485,19 @@ Error message and password prompt
 <div created="20200707151222223" modified="20200707151225690" title="$:/SiteTitle">
 <pre>Installations Wiki</pre>
 </div>
+<div created="20220311151252361" modified="20220311151253843" title="$:/state/image-picker/system-1277902375">
+<pre>show</pre>
+</div>
 <div created="20191217113309399" modified="20191217113309399" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200501173023583" modified="20220217155729672" title="$:/state/sidebar">
+<div created="20200501173023583" modified="20220311153023452" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20220301162422878" list="[[Mac: Install Brew]] GettingStarted" modified="20220301162422878" title="$:/StoryList">
+<div created="20220311161511390" list="" modified="20220311161515774" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10016,9 +10027,11 @@ Hortonworks DataFlow is powered by key open source projects, including Apache Ni
 
 Both are standalone platforms that can operate independently of each other. Although, HDF and HDP are well integrated because HDF is an effective way to get multiple data sources in HDP stored and processed all in one place.</pre>
 </div>
-<div created="20220301155336224" modified="20220301160128651" tags="#helm" title="Helm">
-<pre>(src: https://helm.sh/docs/intro/quickstart/) 
-(src: https://helm.sh/docs/intro/using_helm/)
+<div created="20220301155336224" modified="20220311145622734" tags="#helm" title="Helm">
+<pre>!! Sources
+
+*(src: https://helm.sh/docs/intro/quickstart/) 
+*(src: https://helm.sh/docs/intro/using_helm/)
 
 ---
 
@@ -10040,6 +10053,33 @@ brew install helm
 !! Related definitions
 
 ''Chart'': Helm uses a packaging format called //charts//. A chart is a collection of files that describe a related set of Kubernetes resources. It contains all of the resource definitions necessary to run an application, tool, or service inside of a Kubernetes cluster. </pre>
+</div>
+<div created="20220302150819301" modified="20220311145551915" tags="#brew" title="HomeBrew">
+<pre>!! Sources
+
+!!!! Brew
+* (src: https://www.makeuseof.com/tag/install-mac-software-terminal-homebrew/)
+
+* (src: https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-xxx-and-brew-cask-install-xxx)
+
+!!!! Brew Cask
+* (src:https://apple.stackexchange.com/questions/125468/what-is-the-difference-between-brew-and-brew-cask)
+
+---
+
+!! Definition
+
+
+''Brew'' is a free and open source package manager that lets you install any kind of app on a Mac by using the terminal.
+
+''Brew Cask'' is an extension to Homebrew to install GUI applications such as Google Chrome or Atom.
+
+---
+
+!! Related 
+
+!!! Install Brew
+* [[Mac: Install Brew]]</pre>
 </div>
 <div created="20191217113126154" modified="20201206012603981" tags="[[#grafica #drivers]]" title="Instal·lació drivers gràfica">
 <pre>(src: https://askubuntu.com/questions/1069451/ubuntu-18-04-displays-issue-unknown-display , http://ubuntuhandbook.org/index.php/2019/03/install-nvidia-418-43-g-sync-support-ubuntu-18-04/)
@@ -10116,6 +10156,87 @@ Example:
 type 'Reformat' to search the shortcut's action
 ```</pre>
 </div>
+<div created="20220311142208914" modified="20220311161416515" tags="#kubernetes" title="Kubernetes">
+<pre>!! Sources
+
+!!!! Kubernetes
+* (src: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
+* (src: https://refactorizando.com/introduccion-kubernetes/)
+* (src: https://aprenderbigdata.com/kubernetes/)
+
+!!!!Pods
+* (src: https://kubernetes.io/docs/concepts/workloads/pods/)
+
+---
+
+!! Definition
+
+Kubernetes és un sistema d'orquestració de contenidors open source que ens facilitat i ajuda en l'automatizació del desplegament, escalat i gestió d'aplicacions dins d'un clúster. 
+
+
+---
+
+!! Related definitions
+
+''Pod'' : Representa un conjunt d'un o més containers, que comparteixen recursos d'emmagatzement i xarxa, que es troba corrent en el nostre cluster. 
+
+''Kubectl'' : És el sistema de command line de Kubernetes que ens permet interacturar amb el clúster.
+
+''Minikube'' : És un sistema de Kubernetes d'un únic node en local. Ens permet desenvolupar en local aplicacions en local que posteriorment desplegarem a un clúster. 
+
+---
+
+!! Related with Kubernetes
+
+!!! Helm: Kubernetes package manager
+* [[Helm]]
+
+!!! Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller
+
+* [[Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller]]
+</pre>
+</div>
+<div created="20220311143950340" modified="20220311161611536" tags="#kubernetes" title="Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller">
+<pre>!! Sources
+
+* (src: https://refactorizando.com/clusterip-vs-loadbalancer-vs-nodeport-vs-ingress-en-kubernetes/)
+* (src: https://kubernetes.io/docs/concepts/services-networking/service/)
+
+!!!! Load Balancer
+
+(src: https://www.f5.com/services/resources/glossary/load-balancer)
+
+---
+!! Definitions
+
+''Service'' : Entenem un //service// com el tipus d'accés a nivell de xarxa per tal d'accedir a un servei o aplicació. 
+
+A continuació veurem els diferents tipus de //services// que tenim per accedir a un servei o aplicació.  
+
+'' Load Balancer'' : A load balancer is a device that acts as a reverse proxy and distributes network or application traffic across a number of servers.
+
+[img[img/loadBalancer.png]] 
+
+---
+
+!! Services types
+
+* ''ClusterIP'' : És el //service// que Kubernetes estableix per defecte. Aquest tipus de //service// serà accessible únicament des de dins del nostre clúster per altres serveis o aplicacions. Així doncs, no tindrem accés extern.
+[img[img/clusterIP.png]]
+
+* ''NodePort'' : És una de les primeres formes que disposem per tal de dirigir tràfic extern al nostre servei. Aquest //service// el que fa és obrir un port en els nodes, i d'aquesta manera permetre que tot el tràfic que ens arribi a aquest port es pugui redirigir cap al servei o aplicació corresponent.
+
+[img[img/nodePort.png]]
+
+* ''LoadBalancer'' : Aquest tipus de //service// exposa externament el servei utilitzant generalment un Load Balancer del proveïdor de cloud en el que es trobi el nostre servei. Mitjançant l'ús d'un Load Balancer disposem la possibilitat d'exposar el servei directament i d'aquesta manera el tràfic es dirigirà al port específic al //service//. Això pot provocar un increment del cost del proveïdor cloud al tenir més ports exposats.
+
+[img[img/loadBalancerKubernetes.png]] 
+
+* ''Ingress Controler'' : Quan parlem d' Ingress Controler, no parlem d'un //service// com a tal, sinó que ens referim a una &lt;peça&gt; que es troba al capdavant de molts serveis i que actua com a punt d'entrada al nostre clúster. Aquest és l'eina més utilitzada a l'hora d'exposar múltiples serveis a través d'una mateixa adreça IP.
+
+[img[img/ingressControler.png]] 
+</pre>
+</div>
 <div created="20200608143701309" modified="20220117185130676" tags="" title="Linux Command Line Commands">
 <pre>Extra de persimos per executar un fitxer
 
@@ -10191,25 +10312,8 @@ wslfetch
 ```
 </pre>
 </div>
-<div created="20220203165701600" modified="20220301162643804" tags="#brew #mac" title="Mac: Install Brew">
-<pre>(src: https://www.makeuseof.com/tag/install-mac-software-terminal-homebrew/)
-
-(src: https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-xxx-and-brew-cask-install-xxx)
-
-(src:https://apple.stackexchange.com/questions/125468/what-is-the-difference-between-brew-and-brew-cask)
-
----
-
-!! Definition
-
-
-''Brew'' is a free and open source package manager that lets you install any kind of app on a Mac by using the terminal.
-
-''Brew Cask'' is an extension to Homebrew to install GUI applications such as Google Chrome or Atom.
-
----
-
-!! Install Brew on Mac OS
+<div created="20220203165701600" modified="20220302150847637" tags="#brew #mac" title="Mac: Install Brew">
+<pre>!! Install Brew on Mac OS
 
 To install ''Brew'' execute the following lines on the Terminal.
 
