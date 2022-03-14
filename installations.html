@@ -177,6 +177,8 @@ Error message and password prompt
 
 <li>Anaconda Navigator</li>
 
+<li>Apache ZooKeeper</li>
+
 <li>Change GitKraken Logo Error</li>
 
 <li>Code comparator tools</li>
@@ -212,6 +214,8 @@ Error message and password prompt
 <li>Linux Command Line Commands</li>
 
 <li>Mac: Install Brew</li>
+
+<li>Mac: Programs Installation Script</li>
 
 <li>NodeJS: 10.15 Installation</li>
 
@@ -9497,7 +9501,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20220311161511390" list="" modified="20220311161515774" title="$:/StoryList">
+<div created="20220314175504367" list="" modified="20220314175635314" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9545,11 +9549,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -9801,6 +9805,23 @@ Ex: conda activate
 ```
 anaconda-navigator
 ```</pre>
+</div>
+<div created="20220314175546022" modified="20220314181026117" tags="#zookeeper" title="Apache ZooKeeper">
+<pre>!! Sources
+
+* (src: https://es.cloudera.com/products/open-source/apache-hadoop/apache-zookeeper.html)
+
+* (src: https://zookeeper.apache.org/)
+
+* (src: https://www.adictosaltrabajo.com/2016/07/03/introduccion-a-zookeeper/)
+
+---
+
+!! Definition
+
+ZooKeeper és una eina que ens ofereix un servei centralitzat per gestionar la configuració, naming, sincronització distribuida i els serveis d'agrupació dins d'un clúster a l'hora de treballar amb entorns distribuits.
+
+</pre>
 </div>
 <div created="20200311142059221" modified="20200311143024774" tags="GitKraken" title="Change GitKraken Logo Error">
 <pre>(src : https://forum.snapcraft.io/t/gitkraken-icon-missing/11276/5 )
@@ -10324,6 +10345,63 @@ echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/xavie
 
 eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
 
+```</pre>
+</div>
+<div created="20220314143911509" modified="20220314175531519" tags="#mac" title="Mac: Programs Installation Script">
+<pre>This is a script to install automatically all the main used programs on Mac.
+
+''Step 1'' - Create a //.sh// file.
+
+```
+touch installationScript.sh
+```
+
+''Step 2'' - Edit the //.sh// file and insert all the installation instructions. 
+
+```
+nano installationScript.sh
+```
+
+''Step 3'' - Paste the following code on the //.sh// file and save it.
+
+```
+#HomeBrew Installation
+/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/xaviermaltastarridas/.zprofile
+
+eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
+
+#wget
+brew install wget
+
+#curl
+brew install curl
+
+#Helm
+brew install helm
+
+
+
+
+#CASKS
+#Visual Studio Code
+brew install --cask visual-studio-code
+
+#Git Kraken GUI
+brew install --cask gitkraken
+
+#IntelliJ Community Edition
+brew install --cask intellij-idea-ce
+
+#Edge
+brew install --cask microsoft-edge
+
+#Lens
+brew install --cask lens
+
+#Install sublime text
+brew install --cask sublime-text
 ```</pre>
 </div>
 <div created="20200501173004867" modified="20210812135310684" tags="node" title="NodeJS: 10.15 Installation">
