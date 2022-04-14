@@ -183,6 +183,10 @@ Error message and password prompt
 
 <li>Code comparator tools</li>
 
+<li>Confluent: Confluent Operator</li>
+
+<li>Confluent: Schema Registry</li>
+
 <li>Eth 3 nodes Tools Installation</li>
 
 <li>File comparator Open Source : Meld</li>
@@ -9501,7 +9505,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20220314175504367" list="" modified="20220314175635314" title="$:/StoryList">
+<div created="20220414144625830" list="[[Confluent: Schema Registry]] [[Confluent: Confluent Operator]]" modified="20220414145455445" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9549,11 +9553,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1080&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -9852,6 +9856,41 @@ Icon=/snap/gitkraken/current/usr/share/gitkraken/gitkraken.png
 ''Windows'' :
 
 * Winmerge</pre>
+</div>
+<div created="20220328171016442" modified="20220328173040405" tags="#confluent" title="Confluent: Confluent Operator">
+<pre>!! Sources
+
+* (src: https://docs.confluent.io/5.5.1/installation/operator/index.html)
+
+* (src: https://www.youtube.com/watch?v=P_DEreC4ECw&amp;t=13s)
+
+* (src: https://docs.confluent.io/5.4.2/installation/operator/co-videos.html)
+
+* (src: https://docs.confluent.io/operator/current/co-quickstart.html)
+
+---
+
+!! Definition
+
+Confluent Operator is a piece of software which runs inside a Kubernetes cluster and will be responsible to handle against all custom resources, mainly Zookeeper and Kafka clusters.</pre>
+</div>
+<div created="20220414144637079" modified="20220414145620181" tags="#confluent" title="Confluent: Schema Registry">
+<pre>!! Sources
+
+ * (src: https://docs.confluent.io/platform/current/schema-registry/index.html)
+
+* (src: https://docs.confluent.io/platform/current/schema-registry/schema_registry_tutorial.html#schema-registry-tutorial)
+
+---
+
+!! Definition
+
+Apache Kafka producer write data to Kafka topics while Kafka consumers read data from Kafka topics. 
+There is an implicit 'contract' on how the producers write data with a schema that can be read by consumer, even as producer and consumers evolve their schemas.
+Schema Registry helps ensure that this contract is met with compatibility checks. Schema evolution requires compatibility checks to ensure that the producer-consumer contract is not broken. This is where Schema Registry helps. It provides centralized schema management and compatibility check as schema evolve. 
+
+[img[img/SchemaRegistry.png]]
+</pre>
 </div>
 <div created="20200609182105862" modified="20200609193638413" tags="" title="Eth 3 nodes Tools Installation">
 <pre>Geth :
@@ -10217,11 +10256,12 @@ Kubernetes és un sistema d'orquestració de contenidors open source que ens fac
 * [[Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller]]
 </pre>
 </div>
-<div created="20220311143950340" modified="20220311161611536" tags="#kubernetes" title="Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller">
+<div created="20220311143950340" modified="20220323151312294" tags="#kubernetes" title="Kubernetes: ClusterIP, LoadBalancer, NodePort and Ingress Controller">
 <pre>!! Sources
 
 * (src: https://refactorizando.com/clusterip-vs-loadbalancer-vs-nodeport-vs-ingress-en-kubernetes/)
 * (src: https://kubernetes.io/docs/concepts/services-networking/service/)
+* (src: https://techblog.cisco.com/blog/kafka-external-access)
 
 !!!! Load Balancer
 
