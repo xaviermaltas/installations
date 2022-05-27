@@ -223,6 +223,8 @@ Error message and password prompt
 
 <li>Mac: Install Brew</li>
 
+<li>Mac: Install Java 8 and Java 11 on M1 Mac with Homebrew</li>
+
 <li>Mac: Install R and RStudio</li>
 
 <li>Mac: Programs Installation Script</li>
@@ -9511,7 +9513,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div created="20220527135610841" list="" modified="20220527135610841" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9559,11 +9561,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -10496,6 +10498,48 @@ echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/xavie
 eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
 
 ```</pre>
+</div>
+<div created="20220527135533229" modified="20220527140058394" tags="#mac #m1" title="Mac: Install Java 8 and Java 11 on M1 Mac with Homebrew">
+<pre>!! Sources
+
+* (src: https://afternoondev.medium.com/installing-java-8-java-11-on-macos-bigsur-with-homebrew-2ff424f1d226) 
+
+---
+
+!!! Add AdoptOpenJDK with Homebrew TAP
+
+```
+brew tap AdoptOpenJDK/openjdk
+```
+
+!!! Install Java 8 and Java 11
+
+Installing Java 8
+
+```
+brew install --cask adoptopenjdk8
+```
+
+Installing Java 11
+
+```
+brew install --cask adoptopenjdk11
+```
+
+!!! Export and add alias
+
+This will allow us to switch between Java versions. Add these commands in //.zshrc // file.
+
+
+```
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+alias java8='export JAVA_HOME=$JAVA_8_HOME'export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+```
+
+Run this command after saving to update //.zshrc// file.
+
+</pre>
 </div>
 <div created="20220510134023916" modified="20220510134243983" tags="#m1 #mac" title="Mac: Install R and RStudio">
 <pre>!! Sources 
