@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>Linux Command Line Commands</li>
 
+<li>Mac: Automator actions</li>
+
 <li>Mac: How to install Java8 on M1 Mac with SDKman</li>
 
 <li>Mac: Install Brew</li>
@@ -9515,7 +9517,7 @@ Error message and password prompt
 <div created="20191228222716749" modified="20191228222716749" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20220818145551260" list="" modified="20220818145603124" title="$:/StoryList">
+<div created="20221018180326187" list="" modified="20221018180326187" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9563,11 +9565,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1080&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -10422,6 +10424,33 @@ Show distribution information
 wslfetch
 ```
 </pre>
+</div>
+<div created="20221018174522541" modified="20221018180513590" tags="#mac" title="Mac: Automator actions">
+<pre>!! Sources
+
+* (src: https://www.maketecheasier.com/create-blank-text-file-mac/)
+
+* (src: https://osxdaily.com/2022/01/10/how-to-create-a-text-file-in-folder-on-mac/) 
+
+---
+
+!! Create blank text file in folder
+
+1- Open 'Applications' folder and init 'Automator.app'.
+
+2- Create a 'Quick Action'.
+
+3- Choose 'Run AppleScript'.
+
+4- Copy the following AppleScript text:
+
+```
+tell application &quot;Finder&quot; to make new file at (the target of the front window) as alias
+```
+
+5- Run the code.
+
+6- Save (Command + S) as 'Create Black Text File '</pre>
 </div>
 <div created="20220414155248917" modified="20220414155319772" tags="#mac" title="Mac: How to install Java8 on M1 Mac with SDKman">
 <pre>!! Sources
